@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
-from dataprep.eda import plot_correlation
+#from dataprep.eda import plot_correlation
 from datetime import timedelta
 import matplotlib.pyplot as plt
 
