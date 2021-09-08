@@ -28,3 +28,9 @@ Download and unzip contents from https://github.com/Rush3DLigth/Customer-Segment
 ```
 streamlit run app.py
 ```
+
+### Demo
+
+```
+https://share.streamlit.io/rush3dligth/customer-segmentation/main/app.py
+```
