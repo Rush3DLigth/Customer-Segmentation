@@ -6,7 +6,7 @@
 Download requirements.txt file
 
 ```
-wget https://raw.githubusercontent.com/dataprofessor/eda-app/main/requirements.txt
+wget https://github.com/Rush3DLigth/Customer-Segmentation/blob/main/requirements.txt
 
 ```
 
