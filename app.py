@@ -4,7 +4,7 @@ import streamlit as st
 from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 #from dataprep.eda import plot_correlation
-from datetime import timedelta
+from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 
 # Web App Title
@@ -14,17 +14,18 @@ st.markdown('''
 ---
 ''')
 
-# Upload excel data
-with st.sidebar.header('Upload your excel data'):
-    uploaded_file = st.sidebar.file_uploader("Upload your input excel file", type=["xlsx"])
+# Upload csv data
+with st.sidebar.header('Upload your csv data'):
+    uploaded_file = st.sidebar.file_uploader("Upload your input csv file", type=["csv"])
 
 # Pandas Profiling Report
 if uploaded_file is not None:
     @st.cache
-    def load_excel():
-        excel = pd.read_excel(uploaded_file) ##excel file
-        return excel
-    df = load_excel()
+    def load_csv():
+        csv = pd.read_csv(uploaded_file)
+        csv['InvoiceDate'] = csv.InvoiceDate.astype('datetime64[s]')
+        return csv
+    df = load_csv()
 
     pr = ProfileReport(df, explorative=True)
     st.header('**Input DataFrame**')
@@ -49,6 +50,7 @@ if uploaded_file is not None:
     st.header('**Statistics**')
     df_describe = df.describe().round(2)
     st.write(df_describe)
+
 
     st.header('**Group by Invoice No.**')
     df['Price'] = df['Quantity'] * df['UnitPrice']
