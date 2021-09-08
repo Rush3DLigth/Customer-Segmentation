@@ -23,7 +23,7 @@ if uploaded_file is not None:
     @st.cache
     def load_csv():
         csv = pd.read_csv(uploaded_file)
-        csv['InvoiceDate'] = csv.InvoiceDate.astype('datetime64[s]')
+        csv['InvoiceDate'] = csv.InvoiceDate.astype('datetime64[s]') #change data type
         return csv
     df = load_csv()
 
