@@ -14,6 +14,10 @@ Pip install libraries
 ```
 pip install -r requirements.txt
 ```
+###  Data for testing
+```
+dataset_by_part.csv
+```
 
 ###  Download and unzip contents from GitHub repo
 
