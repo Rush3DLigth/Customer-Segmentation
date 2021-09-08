@@ -31,6 +31,5 @@ streamlit run app.py
 
 ### Demo
 
-```
 https://share.streamlit.io/rush3dligth/customer-segmentation/main/app.py
-```
+
