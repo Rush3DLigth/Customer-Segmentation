@@ -20,7 +20,7 @@ with st.sidebar.header('Upload your excel data'):
 
 # Pandas Profiling Report
 if uploaded_file is not None:
-    #@st.cache
+    @st.cache
     def load_excel():
         excel = pd.read_excel(uploaded_file) ##excel file
         return excel
