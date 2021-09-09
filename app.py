@@ -22,7 +22,7 @@ with st.sidebar.header('Upload your csv data'):
 
 # Pandas Profiling Report
 if uploaded_file is not None:
-    @st.cache(allow_output_mutation=True).
+    @st.cache(allow_output_mutation=True)
     def load_csv():
         csv = pd.read_csv(uploaded_file)
         csv['InvoiceDate'] = csv.InvoiceDate.astype('datetime64[s]') #change type object to datetime
