@@ -239,7 +239,7 @@ else:
             #    np.random.rand(100, 5),
             #    columns=['a', 'b', 'c', 'd', 'e']
             #)
-            url = "https://raw.githubusercontent.com/Rush3DLigth/Customer-Segmentation/main/dataset_by_part.csv"
+            url = "https://raw.githubusercontent.com/Rush3DLigth/Customer-Segmentation/main/dataset_by_part_2.csv"
             s = requests.get(url).content
             a = pd.read_csv(io.StringIO(s.decode('utf-8')))
             a['InvoiceDate'] = a.InvoiceDate.astype('datetime64[s]') #change type object to datetime
