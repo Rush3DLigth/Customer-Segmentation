@@ -1,4 +1,4 @@
-InvoiceNo,ItemNo,Description,Quantity,InvoiceDate,UnitPrice,CustomerI
+InvoiceNo,ItemNo,Description,Quantity,InvoiceDate,UnitPrice,CustomerID
 IV2002103,I00001905,TEST 1,1140.00,13/02/2020,135.00,CUS006
 IV2003159,I0170002,TEST 2,1.00,17/03/2020,81340.00,CUS006
 IV2003161,I0060004,TEST 3,1.00,17/03/2020,2058.00,CUS006
