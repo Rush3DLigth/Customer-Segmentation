@@ -22,7 +22,7 @@ with st.sidebar.header('Upload your csv data'):
 
 # Pandas Profiling Report
 if uploaded_file is not None:
-    @st.cache(allow_output_mutation=True)
+    #@st.cache(allow_output_mutation=True)
     def load_csv():
         csv = pd.read_csv(uploaded_file)
         csv['InvoiceDate'] = csv.InvoiceDate.astype('datetime64[s]') #change type object to datetime
@@ -233,7 +233,7 @@ else:
     st.info('Awaiting for excel file to be uploaded.')
     if st.button('Press to use Example Dataset'):
         # Example data
-        @st.cache
+        #@st.cache(allow_output_mutation=True)
         def load_data():
             #a = pd.DataFrame(
             #    np.random.rand(100, 5),
@@ -351,7 +351,7 @@ else:
             for bar in bars:
                 value = bar.get_height()
                 if value == y.max():
-                    bar.set_color('firebrick')
+                    bar.set_color('blue')
                 ax.text(bar.get_x() + bar.get_width() / 2,
                         value - 5,
                         '{}\n({}%)'.format(int(value), int(value * 100 / y.sum())),
@@ -394,7 +394,7 @@ else:
                 for bar in bars:
                     value = bar.get_height()
                     if value == y.max():
-                        bar.set_color('firebrick')
+                        bar.set_color('blue')
                     ax.text(bar.get_x() + bar.get_width() / 2,
                             value,
                             int(value),
@@ -426,7 +426,7 @@ else:
         for i, bar in enumerate(bars):
                 value = bar.get_width()
                 if segments_counts.index[i] in ['champions', 'loyal customers']:
-                    bar.set_color('firebrick')
+                    bar.set_color('blue')
                 ax.text(value,
                         bar.get_y() + bar.get_height()/2,
                         '{:,} ({:}%)'.format(int(value),
