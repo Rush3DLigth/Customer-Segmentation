@@ -8,6 +8,8 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import io
 import requests
+from markupsafe import escape
+from jinja2 import escape
 
 # Web App Title
 st.markdown('''
