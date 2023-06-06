@@ -8,8 +8,16 @@ from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 import io
 import requests
-from markupsafe import escape
-from jinja2 import escape
+from sklearn.cluster import KMeans
+from yellowbrick.cluster import KElbowVisualizer
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.float_format', lambda x: '%.2f' % x)
+from sklearn import preprocessing
+from itertools import groupby
+from scipy import stats
+import random
+import math
 
 # Web App Title
 st.markdown('''
